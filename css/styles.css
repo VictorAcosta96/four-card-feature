@@ -1,0 +1,137 @@
+/*
+Colores
+  Tarjetas
+    Red: hsl(0, 78%, 62%)
+    Cyan: hsl(180, 62%, 55%)
+    Orange: hsl(34, 97%, 64%)
+    Blue: hsl(212, 86%, 64%)
+  Sombra
+    Dark Blue: hsl(240, 25%, 50%) al 20% de opacidad;
+  Texto
+    Grey: hsl(229, 6%, 66%)
+  Fondo de la tarjeta y del background
+    White: hsl(0, 0%, 93%)
+
+Fuente de la página
+  https://fonts.google.com/specimen/Poppins
+  Estilos 200, 400 y 600
+*/
+
+*{
+  box-sizing: border-box;
+}
+
+/* estilos al body */
+/* centramos el contenido y le agregamos un tamaño de letra de 400 */
+body{
+  background-color: hsl(0, 0%, 93%);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* estilos al titulo que al estar dentro de un espan se comporta como elemento de linea*/
+.main-title{
+  display: block;
+  font-size: 2.5rem;
+}
+
+/* estilos para el subtitulo al cual le vamos a reasignar su ancho y luego lo centraremos.
+si intentamos centrar el subtitulo con text-align no serviria ya que con esta propiedad intentaria centrar su contendio
+y lo que queremos es centrar el elemento */
+.subtitle{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ahora le vamos a dar estilos al contenedor de las tarjetas y solo lo vamos a dar una posicion relativa para
+poder posicionar las tarjetas con respecto a su contenedor*/
+/* tambien tenemos que darle medidas(ancho y alto) parea que las tarjetas se puedan colocar */
+/* tambien debemos centrar el contenedor de las tarjetas y darle un margen superio */
+.cards{
+  position: relative;
+  width: 1200px;
+  height: 550px;
+  margin: 5em auto;
+}
+
+/* poscionamos todas la tarjetas de manera absoluta, tambien le daremos un ancho y un alto y por ultimo un color de fondo */
+.card{
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  padding: 0 2em;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px hsl(240 25% 50% / 0.2);
+  background-color: hsl(0, 0%, 93%);
+}
+
+.card__title,
+.card__text{
+  text-align: left;
+}
+
+.card__icon{
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+}
+
+/* posicionamos la tarjetas */
+
+.card--right,
+.card--left{
+  top: 150px;
+}
+.card--top,
+.card--bottom{
+  left: 425px;
+}
+
+.card--left{
+  left: 0;
+}
+.card--top{
+  top: 0;
+}
+
+.card--right{
+  right: 0;
+}
+
+.card--bottom{
+  bottom: 0;
+}
+
+
+/* border superior de las tarjetas */
+.card--cyan{
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.card--red{
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.card--orange{
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.card--blue{
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+
+.text-light{
+  color: hsl(229, 6%, 66%);
+}
+
+.text-thin{
+  font-weight: 200;
+}
+
+.text-bold{
+  font-weight: 600;
+}
